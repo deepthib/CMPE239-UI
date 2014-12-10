@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Traffic Prediction</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+<!-- Header -->
+<div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-toggle"></span>
+      </button>
+      <a class="navbar-brand" href="#">Data Monks</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        
+         <li>
+          <a href="index.html">
+            <i class="glyphicon glyphicon-home"></i> Home</a>
+        </li>
+      </ul>
+    </div>
+  </div><!-- /container -->
+</div>
+<!-- /Header -->
+
+<!-- Main -->
+<div class="container">
+  
+  <!-- upper section -->
+  <div class="row">
+	<div class="col-sm-3">
+      <!-- left -->
+     <h3>Details...</h3>
+      <hr>
+      
+      <ul class="nav nav-stacked">
+        <li><a href="data.html"><i class="glyphicon glyphicon-link"></i> Data</a></li>
+        <li><a href="cData.html"><i class="glyphicon glyphicon-list-alt"></i>Cleansed Data</a></li>
+         <li><a href="patterns.html"><i class="glyphicon glyphicon-stats"></i> Patterns</a></li>
+        <li><a href="prediction.html"><i class="glyphicon glyphicon-briefcase"></i>Prediction</a></li>
+        <li><a href="accuracy.html"><i class="glyphicon glyphicon-question-sign"></i>Accuracy</a></li>
+        <li><a href="performance.html"><i class="glyphicon glyphicon-time"></i> Performance</a></li>
+      </ul>
+      
+      <hr>
+      
+  	</div><!-- /span-3 -->
+    <div class="col-sm-9">
+      	
+      <!-- column 2 -->	
+       <h3 style="font-family:Helvetica">Freeway Traffic Prediction</h3>  
+            
+       <hr>
+      <font face="verdana" size="3">
+	  <h4>Problem </h4>
+	<p>As congestion is increasing on the freeways and hence the delays, there is an increasing need for a system which provides accurate and reliable travel time prediction. The focus in this paper is mainly on predicting the time to commute between any two points of a freeway for any future departure time.
+	These days’ freeways are equipped with sensors and loop detectors to collect data in order to give current travel time to commuters. The data is collected and processed over the internet in order to give outputs like how much time it will take for the commuter to travel from one location to another at that very moment. Data is processed by using some decision making algorithm whose output is time to travel between two locations at that very moment and is displayed to commuters. </p>
+	<hr>
+	<h4>Technology Stack</h4>
+	<p>1. Pandas ( Data cleaning ) : 
+	 Pandas is a python library used for data manipulation. We used this library in our project to cleanse the data
+<br><br>
+	2. NuPIC ( Data prediction ) : NuPIC is a set of tools which includes machine learning algorithms that enable self training and pattern recognition. We have used swarming in NuPIC to predict models.
+<br>
+	<br>3. MatPlot ( Plotting ) :  MatPlot is a python library used for plotting.
+	</p>
+	<hr>
+	<h4>Implementation</h4>
+	<p>
+	 Data is collected from the sensors on the freeway. We have data in form of csv file. We have data for the year 2011 for the entire New York city.The data in csv file has the following columns : RCStation, Start_Time, Direction, Lane and Count. We only selected monitoring stations that has consecutive hourly count data for more than 60 days for further analysis. For those stations, we picked one direction and aggregate all traffic count from all lanes, and then select the longest continuous recording segment. We used Cortical Learning Algorithm (CLA) in the Numenta Platform for Intelligent Computing (NuPIC) to train the traffic data. Predictions are made based on this.
+
+	</p>
+	</font>
+
+  	</div><!--/col-span-9-->
+    
+  </div><!--/row-->
+  <!-- /upper section -->
+  
+  
+	<!-- script references -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
